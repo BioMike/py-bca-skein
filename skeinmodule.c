@@ -1,6 +1,5 @@
 #include <Python.h>
-
-//#include "skeinhash.h"
+#include "skeinhash.h"
 
 static PyObject *skein_gethash(PyObject *self, PyObject *args)
 {
@@ -55,7 +54,7 @@ PyMODINIT_FUNC PyInit_py_bca_skein(void) {
 
 #else
 
-PyMODINIT_FUNC initskeinhash(void) {
-    (void) Py_InitModule("skeinhash", SkeinMethods);
+PyMODINIT_FUNC initpy_bca_skein(void) {
+    (void) Py_InitModule("py_bca_skein", SkeinMethods);
 }
 #endif
